@@ -1,0 +1,25 @@
+syntax = "proto3";
+
+option go_package = "github.com/myname/myproject/mygrpc";
+
+service OSSProject {
+  rpc ListProjects (ProjectName) returns (ProjectTitles) {}
+  rpc CreateProject (Project) returns (ProjectCreateStatus) {}
+}
+
+message ProjectName {
+  string name = 1;
+}
+message ProjectTitles {
+  repeated string name = 1;
+  repeated string custodian = 2;
+}
+message ProjectCreateStatus {
+  int32 status = 1;
+}
+message Project {
+    string name = 1;
+    string custodian = 2;
+    string description = 3;
+    int32 inceptionYear = 4;
+}
