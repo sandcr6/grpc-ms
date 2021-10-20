@@ -1,5 +1,3 @@
-![rx-m LLC][RX-M LLC]
-
 
 # Microservices
 
